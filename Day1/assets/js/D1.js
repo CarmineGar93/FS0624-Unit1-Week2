@@ -114,8 +114,8 @@ let verifica =
 console.log(verifica);
 document.getElementById("verificaUno").innerHTML = verifica;
 let verifica2 =
-  name1 !== name2.toLowerCase()
-    ? 'le due stringhe "' + name1 + '" e "' + name2.toLowerCase() + '" sono ancora diverse'
-    : 'le due stringhe "' + name1 + '" e "' + name2.toLowerCase() + '" adesso sono uguali';
+  name1 === name2.toLowerCase()
+    ? 'le due stringhe "' + name1 + '" e "' + name2.toLowerCase() + '" adesso sono uguali'
+    : 'le due stringhe "' + name1 + '" e "' + name2.toLowerCase() + '" sono ancora diverse';
 console.log("Dopo aver usato la funzione .toLowerCase " + verifica2);
 document.getElementById('verificaDue').innerHTML = 'Dopo aver usato la funzione .toLowerCase ' + verifica2;
