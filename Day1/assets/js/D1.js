@@ -13,7 +13,7 @@ REGOLE
 /* SCRIVI QUI LA TUA RISPOSTA */
 let spiegazione = document.getElementById("primoPar");
 spiegazione.innerText =
-  "I data types di JavaScript che possiamo assegnare ad una variabile sono: ";
+  "I data types primitivi di JavaScript che possiamo assegnare ad una variabile sono: ";
 let tipo1 =
   "Tipo numero - Questo tipo di dato è numerico e può essere intero o decimale";
 let tipo2 =
@@ -113,6 +113,7 @@ let verifica =
     : "Le due stringhe " + name1 + "e " + name2 + " sono uguali";
 console.log(verifica);
 document.getElementById("verificaUno").innerHTML = verifica;
+
 let verifica2 =
   name1 === name2.toLowerCase()
     ? 'le due stringhe "' + name1 + '" e "' + name2.toLowerCase() + '" adesso sono uguali'
