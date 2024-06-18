@@ -93,7 +93,7 @@ if (carrello2 > 50) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let a = 23;
-let b = 29;
+let b = 36;
 let c = 29;
 if (a === b && a === c) {
   console.log('I tre numeri sono uguali!')
@@ -109,15 +109,15 @@ if (a === b && a === c) {
   console.log('L\' ordine descrescente dei numeri è il seguente: ' + b + ' - ' + c + ' - ' + a);
 } else if (b === c && a > c){
   console.log('L\' ordine descrescente dei numeri è il seguente: ' + a + ' - ' + b + ' - ' + c);
-} else if (a > b && a > c && b > c) {
+} else if (a > b && b > c) {
   console.log('L\' ordine descrescente dei numeri è il seguente: ' + a + ' - ' + b + ' - ' + c);
-} else if (a > b && a > c && c > b) {
+} else if (a > c && c > b) {
   console.log('L\' ordine descrescente dei numeri è il seguente: ' + a + ' - ' + c + ' - ' + b);
-} else if (b > a && b > c && a > c) {
+} else if (b > a && a > c) {
   console.log('L\' ordine descrescente dei numeri è il seguente: ' + b + ' - ' + a + ' - ' + c);
-} else if (b > a && b > c && c > a) {
+} else if (b > c && c > a) {
   console.log('L\' ordine descrescente dei numeri è il seguente: ' + b + ' - ' + c + ' - ' + a);
-} else if (c > a && c > b && a > b) {
+} else if (c > a && a > b) {
   console.log('L\' ordine descrescente dei numeri è il seguente: ' + c + ' - ' + a + ' - ' + b);
 } else {
   console.log('L\' ordine descrescente dei numeri è il seguente: ' + c + ' - ' + b + ' - ' + a);
