@@ -7,11 +7,11 @@
 let x = 10
 let y = 18
 if (x > y) {
-  console.log('Il numero ' + x + ' è maggiore del numero ' + y)
+  console.log('Il numero ' + x + ' è maggiore del numero ' + y);
 } else if (x < y) {
-  console.log('Il numero ' + y + ' è maggiore del numero ' + x)      
+  console.log('Il numero ' + y + ' è maggiore del numero ' + x);      
 } else {
-  console.log('Il numero ' + x + ' e il numero ' + y + ' sono uguali')
+  console.log('Il numero ' + x + ' e il numero ' + y + ' sono uguali');
 }
 
 /* ESERCIZIO 2
