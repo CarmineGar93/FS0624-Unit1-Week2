@@ -8,10 +8,13 @@ let x = 10
 let y = 18
 if (x > y) {
   console.log('Il numero ' + x + ' è maggiore del numero ' + y);
+  document.getElementById('compMag').innerText = 'Il numero ' + x + ' è maggiore del numero ' + y;
 } else if (x < y) {
-  console.log('Il numero ' + y + ' è maggiore del numero ' + x);      
+  console.log('Il numero ' + y + ' è maggiore del numero ' + x);
+  document.getElementById('compMag').innerText = 'Il numero ' + y + ' è maggiore del numero ' + x;      
 } else {
   console.log('Il numero ' + x + ' e il numero ' + y + ' sono uguali');
+  document.getElementById('compMag').innerText = 'Il numero ' + x + ' e il numero ' + y + ' sono uguali';
 }
 
 /* ESERCIZIO 2
@@ -22,8 +25,10 @@ if (x > y) {
 let num1 = 13;
 if (num1 !== 5) {
   console.log('not equal');
+  document.getElementById('compCi').innerText = 'Il numero ' + num1 + ' non è uguale a 5';
 } else {
   console.log('equal');
+  document.getElementById('compCi').innerText = 'Il numero ' + num1 + ' è uguale a 5';
 }
 
 /* ESERCIZIO 3
@@ -34,8 +39,10 @@ if (num1 !== 5) {
 let resto = num1 % 5;
 if (resto === 0) {
   console.log('Il numero ' + num1 + ' è divisibile per 5');
+  document.getElementById('div5').innerText = 'Il numero ' + num1 + ' è divisibile per 5';
 } else {
   console.log('Il numero ' + num1 + ' non è divisibile per 5');
+  document.getElementById('div5').innerText = 'Il numero ' + num1 + ' non è divisibile per 5';
 }
 
 /* ESERCIZIO 4
@@ -48,8 +55,10 @@ let somma1 = x + y;
 let sottrazione1 = Math.abs(x - y);
 if (x === 8 || y === 8 || somma1 === 8 || sottrazione1 === 8) {
   console.log('Uno dei due numeri ' + x + ' e ' + y + ' è uguale ad 8 oppure la loro somma/sottrazione è uguale a 8');
+  document.getElementById('ver8').innerText = 'Uno dei due numeri ' + x + ' e ' + y + ' è uguale ad 8 oppure la loro somma o sottrazione è uguale a 8';
 } else {
   console.log('I numeri ' + x + ' e ' + y + ' non sono uguali ad 8 e la loro somma/sottrazione non è uguale a 8');
+  document.getElementById('ver8').innerText = 'I numeri ' + x + ' e ' + y + ' non sono uguali ad 8 e la loro somma o sottrazione non è uguale a 8';
 }
 
 /* ESERCIZIO 5
@@ -62,11 +71,15 @@ if (x === 8 || y === 8 || somma1 === 8 || sottrazione1 === 8) {
 /* SCRIVI QUI LA TUA RISPOSTA */
 let carrello = 60;
 let spedizione = 10;
+let carrelloTot;
 if (carrello > 50) {
-  console.log('Congratulazioni hai diritto alla spezione gratuita. Totale da addebitare = ' + carrello + ' Euro');
+  carrelloTot = carrello;
+  console.log(carrelloTot);
+  document.getElementById('car1').innerText = 'Congratulazioni hai diritto alla spezione gratuita. Totale da addebitare = ' + carrello + ' Euro'
 } else {
-  let carrelloTot = carrello + spedizione;  
-  console.log('Al costo del carrello di Euro ' + carrello + ' dobbiamo aggiungere il costo della spedizione di 10 Euro. Totale da addebitare = ' + carrelloTot + ' Euro');
+  carrelloTot = carrello + spedizione;  
+  console.log(carrelloTot);
+  document.getElementById('car1').innerText = 'Al costo del carrello di ' + carrello + ' Euro dobbiamo aggiungere il costo della spedizione di 10 Euro. Totale da addebitare = ' + carrelloTot + ' Euro';
 }
 
 /* ESERCIZIO 6
@@ -75,14 +88,18 @@ if (carrello > 50) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let carrello2 = 60;
+
 let blackF = 0.8;
-carrello2 *= blackF;
+let carrello2 = carrello * blackF;
+let carrelloTot2;
 if (carrello2 > 50) {
-  console.log('Congratulazioni hai diritto alla spezione gratuita. Totale da addebitare = ' + carrello2 + ' Euro');
+  carrelloTot2 = carrello2
+  console.log(carrelloTot2);
+  document.getElementById('carBF').innerText = 'Congratulazioni hai diritto alla spezione gratuita. Totale da addebitare = ' + carrelloTot2 + ' Euro';
 } else {
-  let carrelloTot2 = carrello2 + spedizione;
-  console.log('Al costo del carrello di Euro ' + carrello2 + ' dobbiamo aggiungere il costo della spedizione di 10 Euro. Totale da addebitare = ' + carrelloTot2 + ' Euro');
+  carrelloTot2 = carrello2 + spedizione;
+  console.log(carrelloTot2);
+  document.getElementById('carBF').innerText = 'Al costo del carrello di ' + carrello2 + ' Euro dobbiamo aggiungere il costo della spedizione di 10 Euro. Totale da addebitare = ' + carrelloTot2 + ' Euro';
 }
 
 /* ESERCIZIO 7
@@ -94,33 +111,47 @@ if (carrello2 > 50) {
 /* SCRIVI QUI LA TUA RISPOSTA */
 let a = 23;
 let b = 36;
-let c = 29;
+let c = 37;
+document.getElementById('num').innerText = 'I numeri sono: ' + a + ' - ' + b + ' - ' + c;
 if (a === b && a === c) {
-  console.log('I tre numeri sono uguali!')
+  console.log('Uguali')
+  document.getElementById('seq').innerText = 'I tre numeri sono uguali!';
 } else if (a === b && b > c) {
-  console.log('L\' ordine descrescente dei numeri è il seguente: ' + a + ' - ' + b + ' - ' + c);
+  console.log(a + ' - ' + b + ' - ' + c);
+  document.getElementById('seq').innerText = 'L\' ordine descrescente dei numeri è il seguente: ' + a + ' - ' + b + ' - ' + c;
 } else if (a === b && c > b) {
-  console.log('L\' ordine descrescente dei numeri è il seguente: ' + c + ' - ' + a + ' - ' + b);
+  console.log(c + ' - ' + a + ' - ' + b);
+  document.getElementById('seq').innerText = 'L\' ordine descrescente dei numeri è il seguente: ' + c + ' - ' + a + ' - ' + b;
 } else if (a === c && c > b) {
-  console.log('L\' ordine descrescente dei numeri è il seguente: ' + a + ' - ' + c + ' - ' + b);
+  console.log(a + ' - ' + c + ' - ' + b);
+  document.getElementById('seq').innerText = 'L\' ordine descrescente dei numeri è il seguente: ' + a + ' - ' + c + ' - ' + b;
 } else if (a === c && b > c){
-  console.log('L\' ordine descrescente dei numeri è il seguente: ' + b + ' - ' + a + ' - ' + c);
+  console.log(b + ' - ' + a + ' - ' + c);
+  document.getElementById('seq').innerText = 'L\' ordine descrescente dei numeri è il seguente: ' + b + ' - ' + a + ' - ' + c;
 } else if (b === c && c > a) {
-  console.log('L\' ordine descrescente dei numeri è il seguente: ' + b + ' - ' + c + ' - ' + a);
+console.log(b + ' - ' + c + ' - ' + a);
+document.getElementById('seq').innerText = 'L\' ordine descrescente dei numeri è il seguente: ' + b + ' - ' + c + ' - ' + a;
 } else if (b === c && a > c){
-  console.log('L\' ordine descrescente dei numeri è il seguente: ' + a + ' - ' + b + ' - ' + c);
+console.log(a + ' - ' + b + ' - ' + c);
+document.getElementById('seq').innerText = 'L\' ordine descrescente dei numeri è il seguente: ' + a + ' - ' + b + ' - ' + c;
 } else if (a > b && b > c) {
-  console.log('L\' ordine descrescente dei numeri è il seguente: ' + a + ' - ' + b + ' - ' + c);
+console.log(a + ' - ' + b + ' - ' + c);
+document.getElementById('seq').innerText = 'L\' ordine descrescente dei numeri è il seguente: ' + a + ' - ' + b + ' - ' + c;
 } else if (a > c && c > b) {
-  console.log('L\' ordine descrescente dei numeri è il seguente: ' + a + ' - ' + c + ' - ' + b);
+console.log(a + ' - ' + c + ' - ' + b);
+document.getElementById('seq').innerText = 'L\' ordine descrescente dei numeri è il seguente: ' + a + ' - ' + c + ' - ' + b;
 } else if (b > a && a > c) {
-  console.log('L\' ordine descrescente dei numeri è il seguente: ' + b + ' - ' + a + ' - ' + c);
+console.log(b + ' - ' + a + ' - ' + c);
+document.getElementById('seq').innerText = 'L\' ordine descrescente dei numeri è il seguente: ' + b + ' - ' + a + ' - ' + c;
 } else if (b > c && c > a) {
-  console.log('L\' ordine descrescente dei numeri è il seguente: ' + b + ' - ' + c + ' - ' + a);
+console.log(b + ' - ' + c + ' - ' + a);
+document.getElementById('seq').innerText = 'L\' ordine descrescente dei numeri è il seguente: ' + b + ' - ' + c + ' - ' + a;
 } else if (c > a && a > b) {
-  console.log('L\' ordine descrescente dei numeri è il seguente: ' + c + ' - ' + a + ' - ' + b);
+console.log(c + ' - ' + a + ' - ' + b);
+document.getElementById('seq').innerText = 'L\' ordine descrescente dei numeri è il seguente: ' + c + ' - ' + a + ' - ' + b;
 } else {
-  console.log('L\' ordine descrescente dei numeri è il seguente: ' + c + ' - ' + b + ' - ' + a);
+console.log(c + ' - ' + b + ' - ' + a);
+document.getElementById('seq').innerText = 'L\' ordine descrescente dei numeri è il seguente: ' + c + ' - ' + b + ' - ' + a;
 }
 
 /* ESERCIZIO 8
@@ -130,12 +161,14 @@ if (a === b && a === c) {
 
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let val1 = 'Ciao';
+let val1 = true;
 let typeval = typeof( val1 );
 if (typeval === 'number') {
-  console.log('Il valore fornito è un numero')
+  console.log('number')
+  document.getElementById('type').innerText = 'La variabile \"' + val1 + '\" è un numero';
 } else {
-  console.log('Il valore fornito non è un numero ma è ' + typeval);
+  console.log('no number');
+  document.getElementById('type').innerText = 'La variabile \"' + val1 + '\" non è un numero ma è ' + typeval;
 }
 
 /* ESERCIZIO 9
@@ -147,8 +180,10 @@ let d = 13;
 let resto2 = d % 2;
 if (resto2 === 0) {
   console.log('Il numero è pari');
+  document.getElementById('parDis').innerText = 'Il numero ' + d + ' è pari';
 } else {
   console.log('Il numero è dispari');
+  document.getElementById('parDis').innerText = 'Il numero ' + d + ' è dispari';
 }
 
 /* ESERCIZIO 10
@@ -214,6 +249,14 @@ for (let i = 1; i <= 10; i++) {
 }
 console.log(primiNum);
 
+let obj = document.getElementById("test");
+let ul = document.createElement("ul");
+for (let i = 0; i < primiNum.length; i++) {
+  let li = ul.appendChild(document.createElement("li"));
+  li.innerText = 'L\' elemento ' + (i + 1) + ' è ' + primiNum[i];
+}
+obj.appendChild(ul);
+
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
@@ -223,3 +266,10 @@ console.log(primiNum);
 primiNum.pop();
 primiNum.push(100);
 console.log(primiNum);
+let obj1 = document.getElementById("test1");
+let ul1 = document.createElement("ul");
+for (let i = 0; i < primiNum.length; i++) {
+  let li1 = ul1.appendChild(document.createElement("li"));
+  li1.innerText = 'L\' elemento ' + (i + 1) + ' è ' + primiNum[i];
+}
+obj1.appendChild(ul1);
