@@ -207,13 +207,13 @@ console.log(me);
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
+/* SCRIVI QUI LA TUA RISPOSTA */
 const primiNum = [];
 for (let i = 1; i <= 10; i++) {
   primiNum.push(i);
 }
 console.log(primiNum);
 
-/* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
