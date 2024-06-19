@@ -244,4 +244,6 @@ console.log(starWarsCharacters);
 */
 
 let random = Math.floor(Math.random() * starWarsCharacters.length);
-console.log('Il personaggio randomico è il seguente: ' + starWarsCharacters[random].name + ', nato il ' + starWarsCharacters[random].birth_year + ', altezza ' + starWarsCharacters[random].height + 'cm, peso ' + starWarsCharacters[random].height + 'kg, colore della pelle ' + starWarsCharacters[random].skin_color + ', colore degli occhi ' + starWarsCharacters[random].eye_color + ', colore dei capelli ' + starWarsCharacters[random].hair_color + ', di genere ' + starWarsCharacters[random].gender);
+let randomChar = document.getElementById('randomChar');
+console.log(starWarsCharacters[random]);
+randomChar.innerHTML = '<li><strong>Name: </strong>' + starWarsCharacters[random].name + '</li><li><strong>Gender: </strong>' + starWarsCharacters[random].gender + '</li><li><strong>Age: </strong>' + starWarsCharacters[random].birth_year + '</li><li><strong>Height: </strong>' + starWarsCharacters[random].height + '</li><li><strong>Weight: </strong>' + starWarsCharacters[random].mass + '</li><li><strong>Skin color: </strong>' + starWarsCharacters[random].skin_color + '</li><li><strong>Eye color: </strong>' + starWarsCharacters[random].eye_color + '</li><li><strong>Hair color: </strong>' + starWarsCharacters[random].hair_color;
