@@ -237,7 +237,7 @@ while (controllo < femaleCharacters.length) {
   controllo++;
 }
 
-console.log(starWarsCharacters);
+console.log(starWarsCharacters.length);
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
