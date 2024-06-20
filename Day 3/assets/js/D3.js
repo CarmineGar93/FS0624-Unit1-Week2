@@ -1,4 +1,5 @@
-const starWarsCharacters = [
+let
+ starWarsCharacters = [
   {
     name: "Luke Skywalker",
     height: 172,
@@ -226,18 +227,26 @@ console.log(starWarsCharacters);
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
 
-console.log(starWarsCharacters.length)
+console.log(charactersNames.length)
 let controllo = 0;
+let newNamesArr = [];
 while (controllo < femaleCharacters.length) {
-  for (let i = 0; i < starWarsCharacters.length; i++) {
-    if (femaleCharacters[controllo].name === starWarsCharacters[i].name) {
-      starWarsCharacters.splice(i, 1);
+  for (let i = 0; i < charactersNames.length; i++) {
+    /*if (femaleCharacters[controllo].name === charactersNames[i]) {
+      charactersNames.splice(i, 1);
     }
   }
   controllo++;
-}
+}*/
 
-console.log(starWarsCharacters.length);
+    if (charactersNames[i] !== femaleCharacters[controllo].name) {
+        newNamesArr.push(charactersNames[i])
+    }
+  }
+controllo++  
+}
+console.log(newNamesArr);
+console.log(charactersNames.length);
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
