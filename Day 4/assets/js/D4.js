@@ -169,7 +169,7 @@ function reverseString(string) {
 
 
 reverseString('Questa è una prova');
-reverseString('Porco zio');
+reverseString('Lo zio Sam');
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
@@ -221,6 +221,10 @@ upperFirst('questa è una prova');
 /* SCRIVI QUI LA TUA RISPOSTA */
 console.log('-------------------ESERCIZIO 9----------------------')
 function cutString (stringa){
+    if (typeof (stringa) !== 'string') {
+        console.log('Il parametro inserito non è una stringa');
+        return;
+    }
     let a = stringa.length;
     let newString = stringa.slice(1, (a-1));
     console.log(newString);
@@ -236,11 +240,30 @@ cutString('Questa è una prova davvero');
 /* SCRIVI QUI LA TUA RISPOSTA */
 console.log('-------------------ESERCIZIO 10----------------------')
 function giveMeRandom (n) {
+    if (!Number.isInteger(n)) {
+        console.log('Il parametro inserito non è un numero intero');
+        return;
+    }
     let array = [];
     for (let i = 0; i < n; i++) {
-        array[i] = Math.floor(Math.random()* 11);
+        let value = Math.floor(Math.random() * 10);
+        array.push(value);
     }
     console.log(array);
+    for (let i = 0; i < array.length; i ++) {
+        for (let j = i + 1; j < array.length; j++) {
+            if (array[i] === array[j]) {
+                let a = Math.floor(Math.random() * 10);
+                array[i] = a;
+                i = 0;
+                j = 0;
+                
+            }
+        }
+
+    }
+console.log(array);  
+  
 }
 
-giveMeRandom(8);
+giveMeRandom(9);
