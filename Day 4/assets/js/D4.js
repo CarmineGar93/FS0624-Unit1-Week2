@@ -145,7 +145,7 @@ check3and7(21);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 console.log('-------------------ESERCIZIO 7----------------------')
-function reverseString (stringa) {
+/*function reverseString (stringa) {
     if (typeof (stringa) !== 'string') {
         console.log('Il parametro inserito non è una stringa');
         return;
@@ -159,7 +159,14 @@ function reverseString (stringa) {
         console.log(newStringa);
     }
 
+}*/
+function reverseString(string) {
+    let inverso = string.split('');
+        inverso.reverse();
+        inverso = inverso.join('');
+        console.log(inverso);
 }
+
 
 reverseString('Questa è una prova');
 reverseString('Porco zio');
@@ -171,7 +178,7 @@ reverseString('Porco zio');
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 console.log('-------------------ESERCIZIO 8----------------------')
-function upperFirst (stringa) {
+/*function upperFirst (stringa) {
     if (typeof (stringa) !== 'string') {
         console.log('Il parametro inserito non è una stringa');
         return;
@@ -191,8 +198,19 @@ function upperFirst (stringa) {
         }
         console.log(stringaF);
     }
+}*/
+function upperFirst (string) {
+    let words = string.split(' ');
+    let final = [];
+    for (let i = 0; i < words.length; i++) {
+        let first = words[i].charAt(0);
+        first = first.toUpperCase();
+        let cut = words[i].slice(1);
+        let newWord = first + cut;
+        final.push(newWord);
+    }
+    console.log(final.join(' '));
 }
-
 upperFirst('questa è una prova');
 
 /* ESERCIZIO 9
