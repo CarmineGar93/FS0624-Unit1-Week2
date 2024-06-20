@@ -262,8 +262,7 @@ function giveMeRandom (n) {
         }
 
     }
-console.log(array);  
-  
+return array; 
 }
 
 giveMeRandom(9);
